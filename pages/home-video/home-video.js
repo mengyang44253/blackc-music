@@ -1,33 +1,60 @@
-// pages/home-video/home-video.js
+import {
+  getVideoTop
+} from '../../apis/video'
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topMvs:[]
+    topMvs:[],
+    hasMore:true,
+    start:0,
+    limit:30,
+    total:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let self=this
-    wx.request({
-      url: 'http://123.207.32.32:9001/top/mv',
-      data:{
-        offset:0,
-        limit:10
-      },
-      success:function(res){
-        console.log(res);
-        self.setData({topMvs:res.data.data})
-      },
-      fail:function(err){
-        console.log(err);
-      }
+    this.getTopMVData()
+  },
+  async getTopMVData(){
+    if(!this.data.hasMore) return 
+    wx.showNavigationBarLoading()
+    let params={}
+    params.offset=this.data.start
+    const res=await getVideoTop(params)
+    console.log(res);
+    let newData=this.data.topMvs
+    if(this.data.start == 0){
+      newData=res.data
+    }else{
+      newData=newData.concat(res.data)
+    }
+
+    //设置数据
+    this.setData({
+      topMvs:newData
+    })
+    this.setData({
+      hasMore:res.hasMore
+    })
+    if(this.data.start == 0){
+      wx.stopPullDownRefresh()
+    }
+  },
+  handleVideoItemClick(e){
+    let id=e.currentTarget.dataset.item.id
+
+    wx.navigateTo({
+      url: `/pages/datail-video?id=${id}`,
     })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,2 +1,6 @@
-<!--pages/home-video/home-video.wxml-->
-<text>pages/home-video/home-video.wxml</text>
+<view class="video">
+  <view class="item" wx:for="{{topMVs}}" wx:key="id">
+    <vider-item-v1 item="{{item}}" bindtap="handleVideoItemClick" data-item="{{item}}">
+    </vider-item-v1>
+  </view>
+</view>
