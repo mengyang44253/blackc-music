@@ -1,4 +1,5 @@
 .video{
+  padding: 30rpx;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

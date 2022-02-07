@@ -5,6 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    recommendSongs:[],
+    bannerList:[],
+    hotSongList:[],
+    recommendSongList:[],
+    audioContext:null,
+    topList:{
+      0:{},
+      1:{},
+      2:{}   
+    }
+  },
+  handleSearchFocus(){
 
   },
 

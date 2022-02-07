@@ -12,7 +12,7 @@ Page({
     topMvs:[],
     hasMore:true,
     start:0,
-    limit:30,
+    limit:60,
     total:0
   },
 
@@ -27,8 +27,8 @@ Page({
     wx.showNavigationBarLoading()
     let params={}
     params.offset=this.data.start
+    params.limit=this.data.limit
     const res=await getVideoTop(params)
-    console.log(res);
     let newData=this.data.topMvs
     if(this.data.start == 0){
       newData=res.data
@@ -88,14 +88,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.setData({
+      start:0
+    })
+    this.getTopMVData()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if(!this.data.hasMore) return 
+    this.getTopMVData()
   },
 
   /**

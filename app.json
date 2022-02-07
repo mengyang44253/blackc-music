@@ -6,8 +6,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "音乐",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -26,7 +26,8 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "usingComponents": {
+    "van-search":"@vant/weapp/search/index"
+  }
 }

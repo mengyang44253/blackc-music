@@ -13,16 +13,11 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/home-video/home-video",
-          "pathName": "pages/home-video/home-video",
+          "name": "",
+          "pathName": "pages/home-music/home-music",
           "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/home-video/home-video",
-          "pathName": "pages/home-video/home-video",
-          "query": "",
-          "scene": null
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }
