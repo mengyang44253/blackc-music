@@ -1,15 +1,16 @@
-// components/video-list-item/video-list-item.js
+// components/song-detail-header/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    item:{
+    songInfo:{
       type:Object,
-      default:{},
+      value:{},
       observer:function(newValue){
+        console.log(newValue,'组件');
       }
-    }
+    },
   },
 
   /**
@@ -23,11 +24,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleItemClick(){
-      wx.navigateTo({
-        url: `/pages/detail-video/detail-video?id=${this.data.item.id}`,
-      })
-    }
 
   }
 })

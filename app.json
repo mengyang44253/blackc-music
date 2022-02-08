@@ -2,7 +2,10 @@
   "pages": [
     "pages/home-music/home-music",
     "pages/home-video/home-video",
-    "pages/detail-video/detail-video"
+    "pages/detail-video/detail-video",
+    "pages/detail-search/index",
+    "pages/detail-songs/index",
+    "pages/music-player/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +31,6 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "van-search":"@vant/weapp/search/index"
+    "van-search": "@vant/weapp/search/index"
   }
 }

@@ -16,8 +16,19 @@
           "name": "",
           "pathName": "pages/home-music/home-music",
           "query": "",
-          "scene": null,
-          "launchMode": "default"
+          "scene": null
+        },
+        {
+          "name": "pages/detail-search/index",
+          "pathName": "pages/detail-search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/detail-songs/index",
+          "pathName": "pages/detail-songs/index",
+          "query": "ranking=hotRanking&type=rank",
+          "scene": null
         }
       ]
     }
