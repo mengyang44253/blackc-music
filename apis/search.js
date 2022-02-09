@@ -19,3 +19,13 @@ export const getSearchSuggest=async function(params){
   })
   return data
 }
+
+
+export const getSearchResult=async function(params){
+  let data=await myRequest.request({
+    method:'get',
+    params,
+    url:'search'
+  })
+  return data
+}
