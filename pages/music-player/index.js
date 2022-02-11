@@ -5,13 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id:null,
+    currentSong:{},
+    currentPage:0,
+    currentHeight:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //1 获取传入的id
+    const io=options.id
+    this.setData({id})
+
+    //2 根据id获取歌曲信息
+    
 
   },
 

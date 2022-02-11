@@ -1,5 +1,5 @@
 <!-- 1 背景 -->
-
+<image class="bg-image" mode="aspectFill" src="{{}}"></image>
 <!-- 2 导航 -->
 
 <!-- 3 内容 -->
